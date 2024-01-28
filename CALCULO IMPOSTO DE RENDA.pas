@@ -44,13 +44,13 @@ repeat
   deducao4 := 884.96;  
   
 // Tabela de valores do INSS
-  Inbase1   := 1320;
-  Inbase2_1 := 1320.01;
-  Inbase2_2 := 2571.29;
-  Inbase3_1 := 2571.30;
-  Inbase3_2 := 3856.94;
-  Inbase4_1 := 3856.95;
-  Inbase4_2 := 7507.49;
+  Inbase1   := 1412;
+  Inbase2_1 := 1412.01;
+  Inbase2_2 := 2666.68;
+  Inbase3_1 := 2666.69;
+  Inbase3_2 := 4000.03;
+  Inbase4_1 := 4000.04;
+  Inbase4_2 := 7786.02;
 
 // Porcentagens de cada base do INSS
   porcBase1 := 7.5 / 100;
