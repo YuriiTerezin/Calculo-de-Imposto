@@ -1,26 +1,26 @@
 Program IMPOSTO_RENDA ;
 var
-	IrBase, Irbase1_1, Irbase1_2, Irbase2_1, Irbase2_2, Irbase3_1, Irbase3_2, Irbase4 : real;
-	Inbase1, Inbase2_1, Inbase2_2, Inbase3_1, Inbase3_2, Inbase4_1, Inbase4_2 : real;
+IrBase, Irbase1_1, Irbase1_2, Irbase2_1, Irbase2_2, Irbase3_1, Irbase3_2, Irbase4 : real;
+Inbase1, Inbase2_1, Inbase2_2, Inbase3_1, Inbase3_2, Inbase4_1, Inbase4_2 : real;
 	
-	aliquota1, aliquota2, aliquota3, aliquota4 : real;
-	porcBase1, porcBase2, porcBase3, porcBase4 : real;
+aliquota1, aliquota2, aliquota3, aliquota4 : real;
+porcBase1, porcBase2, porcBase3, porcBase4 : real;
 	
-	resultBase1, resultBase2, resultBase3, resultBase4 : real;
-	deducao1, deducao2, deducao3, deducao4 : real;
+resultBase1, resultBase2, resultBase3, resultBase4 : real;
+deducao1, deducao2, deducao3, deducao4 : real;
 	
-	salario, ir, inss, ir2, valorIr, valorIr2, valorDep, dep, result : real;
-	liquido, irSimples, irFinal, valorFgts, fgts, valorTransp, vt : real;
-	dependentes : integer;
-	cont, transporte: char;
+salario, ir, inss, ir2, valorIr, valorIr2, valorDep, dep, result : real;
+liquido, irSimples, irFinal, valorFgts, fgts, valorTransp, vt : real;
+dependentes : integer;
+cont, transporte: char;
 
 Begin
 
-	repeat
+repeat
 
 // Tabela de valores do IR
   IrBase    := 2112;
-	Irbase1_1 := 2112.01;
+  Irbase1_1 := 2112.01;
   Irbase1_2 := 2826.65;
   Irbase2_1 := 2826.66;
   Irbase2_2 := 3751.05;
@@ -29,7 +29,7 @@ Begin
   Irbase4   := 4665.69;
   
 // Valores do Imposto Simplificado e de Dependentes
-  valorDep 	:= 189.59;
+  valorDep := 189.59;
   irSimples := 528;
   
 // Porcentagens de cada base
@@ -39,10 +39,10 @@ Begin
   aliquota4 := 27.5 / 100;
   
 // Valor fixo para diminur o valor do desconto
-	deducao1 := (IrBase * aliquota1);
-  deducao2 := (IrBase * aliquota2)+((IrBase1_2 - IrBase)*(aliquota2 - aliquota1));
-	deducao3 := (IrBase * aliquota3)+((IrBase1_2 - IrBase)*(aliquota3 - aliquota1))+((IrBase2_2 - IrBase1_2)*(aliquota3 - aliquota2));																																																		 
-  deducao4 := (Irbase * aliquota4)+((IrBase1_2 - IrBase)*(aliquota4 - aliquota1))+((IrBase2_2 - IrBase1_2)*(aliquota4 - aliquota2))+((Irbase3_2 - IrBase2_2)*(aliquota4 - aliquota3));  
+deducao1 := (IrBase * aliquota1);
+deducao2 := (IrBase * aliquota2)+((IrBase1_2 - IrBase)*(aliquota2 - aliquota1));
+deducao3 := (IrBase * aliquota3)+((IrBase1_2 - IrBase)*(aliquota3 - aliquota1))+((IrBase2_2 - IrBase1_2)*(aliquota3 - aliquota2));																																																		 
+deducao4 := (Irbase * aliquota4)+((IrBase1_2 - IrBase)*(aliquota4 - aliquota1))+((IrBase2_2 - IrBase1_2)*(aliquota4 - aliquota2))+((Irbase3_2 - IrBase2_2)*(aliquota4 - aliquota3));  
   
 // Tabela de valores do INSS
   Inbase1   := 1412;
